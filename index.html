@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarePoint | Hospital Dashboard</title><link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script defer src="assets/js/app.js"></script>
+</head>
+<body><div class="app-shell">
+<aside class="sidebar" id="sidebar"><div class="brand"><span class="brand-mark">✚</span><span>CarePoint<small>HOSPITAL SYSTEM</small></span></div>
+<nav><span class="nav-label">WORKSPACE</span><a class="active" href="index.html">▦ <span>Dashboard</span></a><a href="patients.html">♙ <span>Patients</span></a><a href="visits.html">♡ <span>Visits & Treatments</span></a><a href="doctors.html">⚕ <span>Doctors</span></a><a href="analytics.html">◷ <span>Analytics</span></a><a href="reports.html">▤ <span>Reports</span></a></nav>
+<div class="sidebar-bottom"><div class="secure-note"> <span class="pulse"></span><div><b>Clinical workspace</b><small>Demo data stored locally</small></div></div><a href="settings.html">⚙ <span>Settings & data</span></a></div></aside>
+<main class="main"><header class="topbar"><button class="menu-btn" id="menuBtn">☰</button><div><div class="eyebrow">OVERVIEW</div><h1>Hospital dashboard</h1></div><div class="top-actions"><span class="today" id="today"></span><a class="button primary" href="patient-form.html">＋ Register patient</a></div></header>
+<section class="welcome"><div><p class="eyebrow light">CARE THAT COUNTS</p><h2>Good care starts with<br>clear information.</h2><p>Monitor patient activity, treatment outcomes and hospital trends in one place.</p></div><div class="welcome-art"><div class="art-cross">✚</div><div class="art-ring ring1"></div><div class="art-ring ring2"></div><div class="art-dot"></div></div></section>
+<section class="stat-grid">
+<div class="stat-card"><div class="stat-top"><span>Total patients</span><span class="stat-icon blue">♙</span></div><strong id="totalPatients">0</strong><small>Registered patient records</small></div>
+<div class="stat-card"><div class="stat-top"><span>Treatment visits</span><span class="stat-icon teal">♡</span></div><strong id="totalVisits">0</strong><small>Recorded encounters</small></div>
+<div class="stat-card"><div class="stat-top"><span>Recovered / discharged</span><span class="stat-icon green">✓</span></div><strong id="recoveredCount">0</strong><small>Visits marked recovered</small></div>
+<div class="stat-card"><div class="stat-top"><span>Deaths recorded</span><span class="stat-icon red">＋</span></div><strong id="deathCount">0</strong><small>Recorded outcomes only</small></div>
+</section>
+<section class="content-grid"><div class="panel chart-panel"><div class="panel-head"><div><h3>Treatment outcomes</h3><p>Distribution across recorded visits</p></div><a href="analytics.html">View analytics ↗</a></div><div class="chart-wrap"><canvas id="outcomeChart"></canvas></div></div>
+<div class="panel"><div class="panel-head"><div><h3>Most treated illnesses</h3><p>Based on visit records</p></div><span class="tiny-badge">TOP 5</span></div><div id="topIllnesses" class="rank-list"></div></div></section>
+<section class="panel table-panel"><div class="panel-head"><div><h3>Recent patient activity</h3><p>Latest recorded treatment visits</p></div><a href="visits.html">View all visits ↗</a></div><div class="table-scroll"><table><thead><tr><th>Patient</th><th>Illness / diagnosis</th><th>Visit date</th><th>Doctor</th><th>Outcome</th></tr></thead><tbody id="recentVisits"></tbody></table></div></section>
+<footer>CarePoint Hospital Management · <span>Demo workspace — use fictional data only</span></footer>
+</main></div></body></html>
